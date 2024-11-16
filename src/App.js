@@ -10,7 +10,7 @@ const WebCalculator = () => {
         backgroundColor: "yellow",
         height: "100vh", // Full viewport height
         width: "100vw", // Full viewport width
-        margin:"20px",
+        margin: "20px",
       }}
     >
       <Box
@@ -24,15 +24,33 @@ const WebCalculator = () => {
           height: "50%",
           width: "50%",
           flexDirection: "column",
-          
         }}
       >
-        <TextField id="outlined-search" label="Search field" type="search" />
-        <Box style={{margin:10}}>
-          <ButtonGroup variant="contained" aria-label="Basic button group">
+        <TextField id="outlined-search" type="search" />
+        <Box style={{ margin: 10, display:"flex", flexDirection:"column" }}>
+          <ButtonGroup aria-label="Basic button group">
+            <Button>7</Button>
+            <Button>8</Button>
+            <Button>9</Button>
+            <Button>+</Button>
+          </ButtonGroup>
+          <ButtonGroup aria-label="Basic button group">
+            <Button>4</Button>
+            <Button>5</Button>
+            <Button>6</Button>
+            <Button>-</Button>
+          </ButtonGroup>
+          <ButtonGroup aria-label="Basic button group">
             <Button>1</Button>
             <Button>2</Button>
             <Button>3</Button>
+            <Button>*</Button>
+          </ButtonGroup>
+          <ButtonGroup aria-label="Basic button group">
+            <Button>0</Button>
+            <Button>.</Button>
+            <Button>=</Button>
+            <Button>/</Button>
           </ButtonGroup>
         </Box>
       </Box>
