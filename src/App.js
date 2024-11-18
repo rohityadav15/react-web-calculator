@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, TextField } from "@mui/material";
+import { Box, Button, ButtonGroup, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 
 const WebCalculator = () => {
@@ -87,6 +87,9 @@ const WebCalculator = () => {
         >
           Clear
         </Button>
+      </Box>
+      <Box>
+        <Typography variant="h3"> Calculator</Typography>
       </Box>
     </Box>
   );
