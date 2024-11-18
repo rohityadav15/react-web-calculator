@@ -2,14 +2,13 @@ import { Box, Button, ButtonGroup, TextField } from "@mui/material";
 import { useState } from "react";
 
 const WebCalculator = () => {
-  const [expression, setExpression] = useState(""); // Stores the current expression
-  const [result, setResult] = useState(null); // Stores the result of the calculation
-
+  const [expression, setExpression] = useState(""); 
+  const [result, setResult] = useState(null); 
   const handleButtonClick = (value) => {
     if (value === "=") {
       try {
-        // Evaluate the expression safely
-        const calculatedResult = eval(expression); // Be cautious with `eval` in real apps
+       
+        const calculatedResult = eval(expression); 
         setResult(calculatedResult);
       } catch (error) {
         setResult("Error");
