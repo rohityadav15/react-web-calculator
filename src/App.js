@@ -2,13 +2,12 @@ import { Box, Button, ButtonGroup, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 
 const WebCalculator = () => {
-  const [expression, setExpression] = useState(""); 
-  const [result, setResult] = useState(null); 
+  const [expression, setExpression] = useState("");
+  const [result, setResult] = useState(null);
   const handleButtonClick = (value) => {
     if (value === "=") {
       try {
-       
-        const calculatedResult = eval(expression); 
+        const calculatedResult = eval(expression);
         setResult(calculatedResult);
       } catch (error) {
         setResult("Error");
@@ -30,6 +29,7 @@ const WebCalculator = () => {
         height: "100vh",
         width: "100vw",
         margin: "20px",
+        flexDirection:"column"
       }}
     >
       <Box
@@ -48,7 +48,7 @@ const WebCalculator = () => {
           id="calculator-display"
           variant="outlined"
           value={result !== null ? result : expression}
-          style={{ width: "100%", marginBottom: "20px" }}
+          style={{ width: "50%", marginBottom: "20px" }}
           inputProps={{ readOnly: true }}
         />
         <Box style={{ margin: 10, display: "flex", flexDirection: "column" }}>
