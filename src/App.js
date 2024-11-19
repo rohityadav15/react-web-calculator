@@ -51,6 +51,7 @@ const WebCalculator = () => {
           style={{ width: "50%", marginBottom: "20px" }}
           inputProps={{ readOnly: true }}
         />
+        <Typography varoant="h4">Total Calculation = {result}</Typography>
         <Box style={{ margin: 10, display: "flex", flexDirection: "column" }}>
           <ButtonGroup style={{ marginBottom: 10 ,backgroundColor:"orange"}}>
             <Button onClick={() => handleButtonClick("7")}>7</Button>
