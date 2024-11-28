@@ -1,98 +1,62 @@
-import { Box, Button, ButtonGroup, TextField, Typography } from "@mui/material";
-import { useState } from "react";
+import { Box } from "@mui/material";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import Calculator from "./pages/Calculator";
+import Factorial from "./pages/Factorial";
+import SimpleInterest from "./pages/SimpleInterest";
 
 const WebCalculator = () => {
-  const [expression, setExpression] = useState("");
-  const [result, setResult] = useState(null);
-  const handleButtonClick = (value) => {
-    if (value === "=") {
-      try {
-        const calculatedResult = eval(expression);
-        setResult(calculatedResult);
-      } catch (error) {
-        setResult("Error");
-      }
-    } else if (value === "C") {
-      setExpression("");
-      setResult(null);
-    } else {
-      setExpression((prev) => prev + value);
-    }
-  };
-
   return (
-    <Box
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        width: "100vw",
-        margin: "20px",
-        flexDirection:"column"
-      }}
-    >
-      <Box
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          padding: "20px",
-          borderRadius: "10px",
-          height: "50%",
-          width: "50%",
-          flexDirection: "column",
-        }}
-      >
-        <TextField
-          id="calculator-display"
-          variant="outlined"
-          value={result !== null ? result : expression}
-          style={{ width: "50%", marginBottom: "20px" }}
-          inputProps={{ readOnly: true }}
-        />
-        <Typography varoant="h4">Total Calculation = {result}</Typography>
-        <Box style={{ margin: 10, display: "flex", flexDirection: "column" }}>
-          <ButtonGroup style={{ marginBottom: 10 ,backgroundColor:"orange"}}>
-            <Button onClick={() => handleButtonClick("7")}>7</Button>
-            <Button onClick={() => handleButtonClick("8")}>8</Button>
-            <Button onClick={() => handleButtonClick("9")}>9</Button>
-            <Button onClick={() => handleButtonClick("+")}>+</Button>
-          </ButtonGroup>
-          <ButtonGroup style={{ marginBottom: 10 , backgroundColor:"orange"}}>
-            <Button onClick={() => handleButtonClick("4")}>4</Button>
-            <Button onClick={() => handleButtonClick("5")}>5</Button>
-            <Button onClick={() => handleButtonClick("6")}>6</Button>
-            <Button onClick={() => handleButtonClick("-")}>-</Button>
-          </ButtonGroup>
-          <ButtonGroup style={{ marginBottom: 10, backgroundColor:"orange" }}>
-            <Button onClick={() => handleButtonClick("1")}>1</Button>
-            <Button onClick={() => handleButtonClick("2")}>2</Button>
-            <Button onClick={() => handleButtonClick("3")}>3</Button>
-            <Button onClick={() => handleButtonClick("*")}>*</Button>
-          </ButtonGroup>
-          <ButtonGroup style={{backgroundColor:"orange"}}>
-            <Button onClick={() => handleButtonClick("0")}>0</Button>
-            <Button onClick={() => handleButtonClick(".")}>.</Button>
-            <Button onClick={() => handleButtonClick("=")}>=</Button>
-            <Button onClick={() => handleButtonClick("/")}>/</Button>
-          </ButtonGroup>
+    <>
+      <Router>
+        <Box>
+          <nav
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-around",
+              // width: "90%",
+              alignItems: "center",
+              // justifyContent:"center",
+              backgroundColor: "black",
+              padding: 8,
+            }}
+          >
+            <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+              Home
+            </Link>
+
+            <Link
+              to="/calculator"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Calculator
+            </Link>
+            <Link
+              to="/factorial"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Factorial
+            </Link>
+            <Link
+              to="/simpleInterest"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              SimpleInterest
+            </Link>
+          </nav>
         </Box>
-        <Button
-          style={{
-            marginTop: "20px",
-            backgroundColor: "red",
-            color: "white",
-          }}
-          onClick={() => handleButtonClick("C")}
-        >
-          Clear
-        </Button>
-      </Box>
-      <Box>
-        <Typography variant="h3"> Calculator</Typography>
-      </Box>
-    </Box>
+        <Box>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/calculator" element={<Calculator />} />
+            <Route path="/factorial" element={<Factorial />} />
+            <Route path="/simpleInterest" element={<SimpleInterest />} />
+          </Routes>
+        </Box>
+      </Router>
+    </>
   );
 };
 
