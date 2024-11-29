@@ -105,7 +105,7 @@ const SimpleInterest = () => {
           Submit
         </Button>
         <Button
-          style={{
+          style={{ 
             marginTop: "20px",
             backgroundColor: "red",
             color: "white",
