@@ -98,9 +98,6 @@ const Home = () => {
             Clear
           </Button>
         </Box>
-        <Box>
-          <Typography variant="h3"> Calculator</Typography>
-        </Box>
       </Box>
     </>
   );
