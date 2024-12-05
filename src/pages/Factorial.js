@@ -23,7 +23,7 @@ console.log("======>", factorialValue)
         />
        
       </Box>
-      <Button onClick={handleSubmit} style={{display:"flex", justifyContent:"center",alignItems:"center"}}>Factorial</Button>
+      <Button onClick={handleSubmit} style={{display:"flex", justifyContent:"center",alignItems:"centergit"}}>Factorial</Button>
     </>
   );
 };
