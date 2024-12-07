@@ -57,34 +57,66 @@ const Calculator = () => {
           <Typography varoant="h4">Total Calculation = {result}</Typography>
           <Box style={{ margin: 10, display: "flex", flexDirection: "column" }}>
             <ButtonGroup
-              style={{ marginBottom: 10, backgroundColor: "orange" }}
+              style={{ marginBottom: 10, backgroundColor: "black", color: "white" }}
             >
-              <Button onClick={() => handleButtonClick("7")}>7</Button>
-              <Button onClick={() => handleButtonClick("8")}>8</Button>
-              <Button onClick={() => handleButtonClick("9")}>9</Button>
-              <Button onClick={() => handleButtonClick("+")}>+</Button>
+              <Button onClick={() => handleButtonClick("7")} color="white">
+                7
+              </Button>
+              <Button onClick={() => handleButtonClick("8")} color="white">
+                8
+              </Button>
+              <Button onClick={() => handleButtonClick("9")} color="white">
+                9
+              </Button>
+              <Button onClick={() => handleButtonClick("+")} color="white">
+                +
+              </Button>
             </ButtonGroup>
             <ButtonGroup
-              style={{ marginBottom: 10, backgroundColor: "orange" }}
+              style={{ marginBottom: 10, backgroundColor: "black", color: "white" }}
             >
-              <Button onClick={() => handleButtonClick("4")}>4</Button>
-              <Button onClick={() => handleButtonClick("5")}>5</Button>
-              <Button onClick={() => handleButtonClick("6")}>6</Button>
-              <Button onClick={() => handleButtonClick("-")}>-</Button>
+              <Button onClick={() => handleButtonClick("4")} color="white">
+                4
+              </Button>
+              <Button onClick={() => handleButtonClick("5")} color="white">
+                5
+              </Button>
+              <Button onClick={() => handleButtonClick("6")} color="white">
+                6
+              </Button>
+              <Button onClick={() => handleButtonClick("-")} color="white">
+                -
+              </Button>
             </ButtonGroup>
             <ButtonGroup
-              style={{ marginBottom: 10, backgroundColor: "orange" }}
+              style={{ marginBottom: 10, backgroundColor: "black", color: "white" }}
             >
-              <Button onClick={() => handleButtonClick("1")}>1</Button>
-              <Button onClick={() => handleButtonClick("2")}>2</Button>
-              <Button onClick={() => handleButtonClick("3")}>3</Button>
-              <Button onClick={() => handleButtonClick("*")}>*</Button>
+              <Button onClick={() => handleButtonClick("1")} color="white">
+                1
+              </Button>
+              <Button onClick={() => handleButtonClick("2")} color="white">
+                2
+              </Button>
+              <Button onClick={() => handleButtonClick("3")} color="white">
+                3
+              </Button>
+              <Button onClick={() => handleButtonClick("*")} color="white">
+                *
+              </Button>
             </ButtonGroup>
-            <ButtonGroup style={{ backgroundColor: "orange" }}>
-              <Button onClick={() => handleButtonClick("0")}>0</Button>
-              <Button onClick={() => handleButtonClick(".")}>.</Button>
-              <Button onClick={() => handleButtonClick("=")}>=</Button>
-              <Button onClick={() => handleButtonClick("/")}>/</Button>
+            <ButtonGroup style={{ backgroundColor: "black", color: "white" }}>
+              <Button onClick={() => handleButtonClick("0")} color="white">
+                0
+              </Button>
+              <Button onClick={() => handleButtonClick(".")} color="white">
+                .
+              </Button>
+              <Button onClick={() => handleButtonClick("=")} color="white">
+                =
+              </Button>
+              <Button onClick={() => handleButtonClick("/")} color="white">
+                /
+              </Button>
             </ButtonGroup>
           </Box>
           <Button
