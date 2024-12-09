@@ -6,6 +6,7 @@ import Calculator from "./pages/Calculator";
 import Factorial from "./pages/Factorial";
 import RupeesToDollor from "./pages/RupeesToDllor";
 import SimpleInterest from "./pages/SimpleInterest";
+import MeterToCentimeter from "./pages/MeterToCentimeter";
 
 const WebCalculator = () => {
   return (
@@ -47,6 +48,12 @@ const WebCalculator = () => {
               Simple Interest
             </Link>
             <Link
+              to="/meterToCentimeter"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Meter To Centimeter
+            </Link>
+            <Link
               to="/rupeesToDollor"
               style={{ color: "white", textDecoration: "none" }}
             >
@@ -61,6 +68,7 @@ const WebCalculator = () => {
             <Route path="/factorial" element={<Factorial />} />
             <Route path="/simpleInterest" element={<SimpleInterest />} />
             <Route path="/rupeesToDollor" element={<RupeesToDollor />} />
+            <Route path="/meterToCentimeter" element={<MeterToCentimeter />} />
           </Routes>
         </Box>
       </Router>
