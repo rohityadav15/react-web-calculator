@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Calculator from "./pages/Calculator";
 import Factorial from "./pages/Factorial";
+import RupeesToDollor from "./pages/RupeesToDllor";
 import SimpleInterest from "./pages/SimpleInterest";
 
 const WebCalculator = () => {
@@ -43,7 +44,13 @@ const WebCalculator = () => {
               to="/simpleInterest"
               style={{ color: "white", textDecoration: "none" }}
             >
-              SimpleInterest
+              Simple Interest
+            </Link>
+            <Link
+              to="/rupeesToDollor"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Rupees To Dollor
             </Link>
           </nav>
         </Box>
@@ -53,6 +60,7 @@ const WebCalculator = () => {
             <Route path="/calculator" element={<Calculator />} />
             <Route path="/factorial" element={<Factorial />} />
             <Route path="/simpleInterest" element={<SimpleInterest />} />
+            <Route path="/rupeesToDollor" element={<RupeesToDollor />} />
           </Routes>
         </Box>
       </Router>
