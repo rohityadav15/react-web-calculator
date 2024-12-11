@@ -50,14 +50,14 @@ function FactorialApp() {
           sx={{
             padding: 3,
             border: "1px solid #ccc",
-            borderRadius: "10px",
+           borderRadius: "10px",
             boxShadow: 3,
           }}
         >
           <Typography variant="h4" component="h1" gutterBottom>
             Factorial Calculator
           </Typography>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit ={handleSubmit}>
             <TextField
               label="Enter a number"
               variant="outlined"

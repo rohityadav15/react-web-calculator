@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, TextField, Typography } from "@mui/material";
+import { Box, Button, ButtonGroup, CssBaseline, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 
 const Calculator = () => {
@@ -33,25 +33,29 @@ const Calculator = () => {
           width: "90vw",
           margin: "20px",
           flexDirection: "column",
+            
         }}
       >
+        <CssBaseline/>
         <Box
           style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            padding: "20px",
-            borderRadius: "10px",
-            height: "50%",
-            width: "50%",
+            padding: "10px",
+            borderRadius: "20px",
+            // height: "50%",
+            width: "25%",
             flexDirection: "column",
+            border: "1px solid blue",
+            boxShadow: "5px",
           }}
         >
           <TextField
             id="calculator-display"
             variant="outlined"
             value={result !== null ? result : expression}
-            style={{ width: "50%", marginBottom: "20px" }}
+            style={{ width: "50%", marginBottom: "20px" , marginTop:"20px"}}
             inputProps={{ readOnly: true }}
           />
           <Typography varoant="h4">Total Calculation = {result}</Typography>
