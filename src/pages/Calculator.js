@@ -1,4 +1,11 @@
-import { Box, Button, ButtonGroup, CssBaseline, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  CssBaseline,
+  TextField,
+  Typography,
+} from "@mui/material";
 import { useState } from "react";
 
 const Calculator = () => {
@@ -33,10 +40,9 @@ const Calculator = () => {
           width: "90vw",
           margin: "20px",
           flexDirection: "column",
-            
         }}
       >
-        <CssBaseline/>
+        <CssBaseline />
         <Box
           style={{
             display: "flex",
@@ -48,20 +54,24 @@ const Calculator = () => {
             width: "25%",
             flexDirection: "column",
             border: "1px solid blue",
-            boxShadow: "5px",
+            boxShadow: "0px 4px 10px rgba(2, 2, 2, 2)",
           }}
         >
           <TextField
             id="calculator-display"
             variant="outlined"
             value={result !== null ? result : expression}
-            style={{ width: "50%", marginBottom: "20px" , marginTop:"20px"}}
+            style={{ width: "50%", marginBottom: "20px", marginTop: "20px" }}
             inputProps={{ readOnly: true }}
           />
           <Typography varoant="h4">Total Calculation = {result}</Typography>
           <Box style={{ margin: 10, display: "flex", flexDirection: "column" }}>
             <ButtonGroup
-              style={{ marginBottom: 10, backgroundColor: "black", color: "white" }}
+              style={{
+                marginBottom: 10,
+                backgroundColor: "black",
+                color: "white",
+              }}
             >
               <Button onClick={() => handleButtonClick("7")} color="white">
                 7
@@ -77,7 +87,11 @@ const Calculator = () => {
               </Button>
             </ButtonGroup>
             <ButtonGroup
-              style={{ marginBottom: 10, backgroundColor: "black", color: "white" }}
+              style={{
+                marginBottom: 10,
+                backgroundColor: "black",
+                color: "white",
+              }}
             >
               <Button onClick={() => handleButtonClick("4")} color="white">
                 4
@@ -93,7 +107,11 @@ const Calculator = () => {
               </Button>
             </ButtonGroup>
             <ButtonGroup
-              style={{ marginBottom: 10, backgroundColor: "black", color: "white" }}
+              style={{
+                marginBottom: 10,
+                backgroundColor: "black",
+                color: "white",
+              }}
             >
               <Button onClick={() => handleButtonClick("1")} color="white">
                 1

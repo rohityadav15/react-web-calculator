@@ -1,94 +1,119 @@
-// const MeterToCentimeter=()=>{
-//     return(
-//         <>
-//         Change Meter to centimeter
-//         </>
-//     )
-// }
-// export default MeterToCentimeter;
-import React, { useState } from "react";
-import {
-  TextField,
-  Button,
-  Typography,
-  Container,
-  Box,
-  CssBaseline,
-} from "@mui/material";
+import { Box, Button, TextField, Typography } from "@mui/material";
+import { useState } from "react";
 
-function FactorialApp() {
-  const [number, setNumber] = useState("");
-  const [result, setResult] = useState(null);
+const MeterToCentimeter = () => {
+  const [data, setData] = useState(0);
+  const [feet, setFeet] = useState(0);
+  const [inch, setInch] = useState(0);
+  const [Centimeter, setCentimeter] = useState(0);
+  const [kiloMeter, setKiloMeter] = useState(0);
 
-  // Factorial calculation function
-  const calculateFactorial = (num) => {
-    if (num < 0) return "Invalid input! Enter a non-negative number.";
-    if (num === 0 || num === 1) return 1;
-    return num * calculateFactorial(num - 1);
+  const handleMeter = (e) => {
+    setData(e.target.value);
   };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const num = parseInt(number, 10);
-    if (isNaN(num)) {
-      setResult("Please enter a valid number!");
-    } else {
-      const factorialResult = calculateFactorial(num);
-      setResult(factorialResult);
-    }
+  const handleFeet = () => {
+    const num = data;
+    const f = (num * 100) / 30;
+    const fixed = f.toFixed(3);
+    setData(num);
+    setFeet(fixed);
   };
-
+  const handleCentimeter = () => {
+    const num = data;
+    const c = num * 100;
+    setCentimeter(c);
+    setData(num);
+  };
+  const handleInch = () => {
+    const num = data;
+    const i = num * 39.37;
+    const inch = i.toFixed(3);
+    setData(num);
+    setInch(inch);
+  };
+  const handleKiloMeter = () => {
+    const num = data;
+    const meter = num / 1000;
+    setKiloMeter(meter);
+  };
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container
-        maxWidth="sm"
-        style={{ textAlign: "center", marginTop: "50px" }}
+    <Box
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        border: "1px solid blue",
+        justifyContent: "center",
+        alignItems: "center",
+        boxShadow: "0px 4px 10px rgba(2, 2, 2, 2)",
+        borderRadius: "1.5%",
+        width: "40%",
+        height: "60vh",
+      }}
+    >
+      <Box style={{ display: "flex", flexDirection: "row" }}>
+        <Typography variant="h5" mr={2}>
+          Meter:
+        </Typography>
+        <TextField
+          size="small"
+          type="Number"
+          style={{ width: "200px" }}
+          onChange={handleMeter}
+        />
+      </Box>
+      <Box
+        style={{
+          display: "flex",
+          alignItems: "left",
+          flexDirection: "column",
+          marginTop: "20px",
+          boxShadow: "0px 4px 10px rgba(2, 2, 2, 2)",
+          borderRadius: "1.5%",
+          width: "40%",
+          height: "30%",
+        }}
       >
-        <Box
-          sx={{
-            padding: 3,
-            border: "1px solid #ccc",
-           borderRadius: "10px",
-            boxShadow: 3,
-          }}
+        <Typography mt={1} ml={2}>
+          Feet = {feet} ft
+        </Typography>
+        <Typography ml={2}>Centimeter = {Centimeter} cm</Typography>
+        <Typography ml={2}>Inch = {inch} inch</Typography>
+        <Typography ml={2}>KM = {kiloMeter} km</Typography>
+      </Box>
+      <Box marginTop={5} style={{ display: "flex" }}>
+        <Button
+          onClick={handleCentimeter}
+          variant="contained"
+          style={{ display: "flex", marginRight: "5px" }}
         >
-          <Typography variant="h4" component="h1" gutterBottom>
-            Factorial Calculator
-          </Typography>
-          <form onSubmit ={handleSubmit}>
-            <TextField
-              label="Enter a number"
-              variant="outlined"
-              fullWidth
-              value={number}
-              onChange={(e) => setNumber(e.target.value)}
-              style={{ marginBottom: "20px" }}
-            />
-            <Button
-              variant="contained"
-              color="primary"
-              type="submit"
-              fullWidth
-              style={{ padding: "10px 0", fontSize: "16px" }}
-            >
-              Calculate Factorial
-            </Button>
-          </form>
-          {result !== null && (
-            <Typography
-              variant="h6"
-              component="div"
-              style={{ marginTop: "20px", color: "#3f51b5" }}
-            >
-              <strong>Result:</strong> {result}
-            </Typography>
-          )}
-        </Box>
-      </Container>
-    </React.Fragment>
+          Centimeter
+        </Button>
+        <Button
+          onClick={handleFeet}
+          variant="contained"
+          style={{ display: "flex", marginRight: "5px" }}
+        >
+          Feet
+        </Button>
+      </Box>
+      <Box marginTop={1} style={{ display: "flex" }}>
+        <Button
+          onClick={handleInch}
+          variant="contained"
+          style={{ display: "flex", marginRight: "5px" }}
+        >
+          Inch
+        </Button>
+        <Button
+          onClick={handleKiloMeter}
+          variant="contained"
+          style={{ display: "flex", marginRight: "5px" }}
+        >
+          KM
+        </Button>
+      </Box>
+    </Box>
   );
-}
-
-export default FactorialApp;
+};
+export default MeterToCentimeter;

@@ -45,76 +45,96 @@ const SimpleInterest = () => {
           alignItems: "center",
           padding: "20px",
           borderRadius: "10px",
-          height: "50%",
-          width: "50%",
+          height: "60vh",
+          width: "80%",
+          margin: "5%",
           flexDirection: "column",
+          boxShadow: "0px 4px 10px rgba(2, 2, 2, 2)",
         }}
       >
         <Box
           style={{
             display: "flex",
-            flexDirection: "row",
-            margin: 5,
-            align: "left",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "20px",
+            // borderRadius: "10px",
+            // height: "70%",
+            // width: "70%",
+            flexDirection: "column",
+            // boxShadow: "0px 4px 10px rgba(2, 2, 2, 2)",
           }}
         >
-          <Typography style={{ marginRight: 5 }}>Principale</Typography>
-          <TextField
-            label="Principale"
-            id="outlined-size-small"
-            size="small"
-            type="Number"
-            onChange={handlePrincipale}
-            style={{ marginBottom: "20px", marginLeft: 20 }}
-          />
-        </Box>
-        <Box style={{ display: "flex", flexDirection: "row", margin: 0 }}>
-          <Typography style={{ marginRight: 30, align: "right" }}>
-            Rate
-          </Typography>
-          <TextField
-            label="Rate"
-            id="outlined-size-small"
-            size="small"
-            type="Number"
-            onChange={handleRate}
-            style={{ marginBottom: "20px", marginLeft: 20 }}
-          />
-        </Box>
-        <Box style={{ display: "flex", flexDirection: "row", margin: 5 }}>
-          <Typography style={{ marginRight: 5 }}>Duration</Typography>
-          <TextField
-            label="Duration(year)"
-            id="outlined-size-small"
-            size="small"
-            type="Number"
-            onChange={handleDuration}
-            style={{ marginBottom: "20px", marginLeft: 20 }}
-          />
-        </Box>
+          <Box
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              margin: 5,
+              align: "left",
+            }}
+          >
+            <Typography style={{ marginRight: 5 }}>Principale</Typography>
+            <TextField
+              label="Principale"
+              id="outlined-size-small"
+              size="small"
+              type="Number"
+              onChange={handlePrincipale}
+              style={{ marginBottom: "20px", marginLeft: 20 }}
+            />
+          </Box>
+          <Box style={{ display: "flex", flexDirection: "row", margin: 0 }}>
+            <Typography style={{ marginRight: 30, align: "right" }}>
+              Rate
+            </Typography>
+            <TextField
+              label="Rate"
+              id="outlined-size-small"
+              size="small"
+              type="Number"
+              onChange={handleRate}
+              style={{ marginBottom: "20px", marginLeft: 20 }}
+            />
+          </Box>
+          <Box style={{ display: "flex", flexDirection: "row", margin: 5 }}>
+            <Typography style={{ marginRight: 5 }}>Duration</Typography>
+            <TextField
+              label="Duration(year)"
+              id="outlined-size-small"
+              size="small"
+              type="Number"
+              onChange={handleDuration}
+              style={{ marginBottom: "20px", marginLeft: 20 }}
+            />
+          </Box>
 
-        {submit}
-        <Button
-          style={{
-            marginTop: "20px",
-            backgroundColor: "red",
-            color: "white",
-          }}
-          onClick={handleSubmit}
-        >
-          Submit
-        </Button>
-        <Button
-          style={{ 
-            marginTop: "20px",
-            backgroundColor: "red",
-            color: "white",
-          }}
-          onClick={handleClear}
-          disabled={rate === "" && principale === "" && duration === ""}
-        >
-          Clear
-        </Button>
+          {submit}
+          <Box style={{display:"flex"}}>
+            <Button
+              style={{
+                marginTop: "20px",
+                backgroundColor: "navy",
+                color: "white",
+                marginRight:"5px",
+              }}
+              onClick={handleSubmit}
+            >
+              Submit
+            </Button>
+            <Button
+              style={{
+                marginTop: "20px",
+                backgroundColor: "red",
+                color: "white",
+                marginLeft:"5px",
+              }}
+              onClick={handleClear}
+              disabled={rate === "" && principale === "" && duration === ""}
+            >
+              Clear
+            </Button>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
