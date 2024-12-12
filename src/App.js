@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Calculator from "./pages/Calculator";
 import Factorial from "./pages/Factorial";
-import RupeesToDollor from "./pages/RupeesToDllor";
+import Age from "./pages/Age";
 import SimpleInterest from "./pages/SimpleInterest";
 import MeterToCentimeter from "./pages/MeterToCentimeter";
 
@@ -54,20 +54,32 @@ const WebCalculator = () => {
               Meter To Centimeter
             </Link>
             <Link
-              to="/rupeesToDollor"
+              to="/age"
               style={{ color: "white", textDecoration: "none" }}
             >
-              Rupees To Dollor
+              Age
             </Link>
           </nav>
         </Box>
-        <Box>
+        <Box
+          style={{
+            display: "flex",
+            alignItems:"center",
+            justifyContent:"center",
+            width: "215vh",
+            height:"90vh",
+            margin:"1%",
+            borderRadius:"1%",
+            // position:"fixed",
+            boxShadow: "0px 4px 10px rgba(2, 2, 2, 2)",
+          }}
+        >
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/calculator" element={<Calculator />} />
             <Route path="/factorial" element={<Factorial />} />
             <Route path="/simpleInterest" element={<SimpleInterest />} />
-            <Route path="/rupeesToDollor" element={<RupeesToDollor />} />
+            <Route path="/age" element={<Age />} />
             <Route path="/meterToCentimeter" element={<MeterToCentimeter />} />
           </Routes>
         </Box>

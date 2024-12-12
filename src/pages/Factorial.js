@@ -30,18 +30,17 @@ const Factorial = () => {
         padding: "20px",
         borderRadius: "10px",
         backgroundColor: "#ffffff",
+        boxShadow: "0px 4px 10px rgba(2, 2, 2, 2)",
       }}
     >
       <Box
         style={{
           display: "flex",
-          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
-          width: "40%",
           flexDirection: "column",
           justifyContent: "center",
-        alignItems: "center",
-        marginBottom:"20px",
-        paddingBottom:"20px"
+          alignItems: "center",
+          marginBottom: "20px",
+          paddingBottom: "20px",
         }}
       >
         <Box
