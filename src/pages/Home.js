@@ -10,7 +10,7 @@ import {
   InputLabel,
 } from '@mui/material';
 
-function TrigonometryCalculator() {
+function Home() {
   const [angle, setAngle] = useState('');
   const [functionType, setFunctionType] = useState('sin');
   const [result, setResult] = useState(null);
@@ -106,4 +106,4 @@ function TrigonometryCalculator() {
   );
 }
 
-export default TrigonometryCalculator;
+export default Home;

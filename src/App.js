@@ -1,12 +1,13 @@
 import { Box } from "@mui/material";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/Home"
 import Calculator from "./pages/Calculator";
 import Factorial from "./pages/Factorial";
 import Age from "./pages/Age";
 import SimpleInterest from "./pages/SimpleInterest";
 import MeterToCentimeter from "./pages/MeterToCentimeter";
+import CompoundInterest from "./pages/CompoundInterest";
 
 const WebCalculator = () => {
   return (
@@ -48,6 +49,12 @@ const WebCalculator = () => {
               Simple Interest
             </Link>
             <Link
+              to="/compoundInterest"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Compound Interest
+            </Link>
+            <Link
               to="/meterToCentimeter"
               style={{ color: "white", textDecoration: "none" }}
             >
@@ -79,6 +86,7 @@ const WebCalculator = () => {
             <Route path="/calculator" element={<Calculator />} />
             <Route path="/factorial" element={<Factorial />} />
             <Route path="/simpleInterest" element={<SimpleInterest />} />
+            <Route path="/compoundInterest" element={<CompoundInterest />} />
             <Route path="/age" element={<Age />} />
             <Route path="/meterToCentimeter" element={<MeterToCentimeter />} />
           </Routes>
