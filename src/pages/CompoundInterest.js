@@ -33,7 +33,7 @@ const CompoundInterest = () => {
     const b = r/100;
     const d=b/n;
     const e=(1 + d);
-    const c=e^a
+    const c=Math.pow((e/a),a);
     const s = p*c;
     setTime(t)
     setInterest(r)
