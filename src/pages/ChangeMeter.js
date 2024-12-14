@@ -1,7 +1,7 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 
-const MeterToCentimeter = () => {
+const ChangeMeter = () => {
   const [data, setData] = useState(0);
   const [feet, setFeet] = useState(0);
   const [inch, setInch] = useState(0);
@@ -116,4 +116,4 @@ const MeterToCentimeter = () => {
     </Box>
   );
 };
-export default MeterToCentimeter;
+export default ChangeMeter;

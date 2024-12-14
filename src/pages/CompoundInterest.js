@@ -100,8 +100,9 @@ const CompoundInterest = () => {
           />
         </Box>
       </Box>
+      <Box><Typography>Total compound interest: {result}</Typography></Box>
       <Button onClick={handleSubmit}>Submit</Button>
-      {result}
+      
     </Box>
   );
 };

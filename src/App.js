@@ -6,8 +6,9 @@ import Calculator from "./pages/Calculator";
 import Factorial from "./pages/Factorial";
 import Age from "./pages/Age";
 import SimpleInterest from "./pages/SimpleInterest";
-import MeterToCentimeter from "./pages/MeterToCentimeter";
 import CompoundInterest from "./pages/CompoundInterest";
+import NumberToWords from "./pages/NumberToWords";
+import ChangeMeter from "./pages/ChangeMeter";
 
 const WebCalculator = () => {
   return (
@@ -55,16 +56,22 @@ const WebCalculator = () => {
               Compound Interest
             </Link>
             <Link
-              to="/meterToCentimeter"
+              to="/changeMeter"
               style={{ color: "white", textDecoration: "none" }}
             >
-              Meter To Centimeter
+            Change Meter
             </Link>
             <Link
               to="/age"
               style={{ color: "white", textDecoration: "none" }}
             >
               Age
+            </Link>
+            <Link
+              to="/numberToWords"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              Number To Words
             </Link>
           </nav>
         </Box>
@@ -88,7 +95,8 @@ const WebCalculator = () => {
             <Route path="/simpleInterest" element={<SimpleInterest />} />
             <Route path="/compoundInterest" element={<CompoundInterest />} />
             <Route path="/age" element={<Age />} />
-            <Route path="/meterToCentimeter" element={<MeterToCentimeter />} />
+            <Route path="/changeMeter" element={<ChangeMeter />} />
+            <Route path="/numberToWords" element={<NumberToWords />} />
           </Routes>
         </Box>
       </Router>
