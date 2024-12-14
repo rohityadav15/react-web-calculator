@@ -29,26 +29,33 @@ const CompoundInterest = () => {
     const r = interest;
     const n = number;
     const p = principle;
-    const a=(n * t);
-    const b = r/100;
-    const d=b/n;
-    const e=(1 + d);
-    const c=Math.pow((e/a),a);
-    const s = p*c;
-    setTime(t)
-    setInterest(r)
-    setNumber(n)
-    setPrinciple(p)
-    setResult(s);
-    console.log("+====>",a,b,d,c,e,s)
+    const a = n * t;
+    const b = r / 100;
+    const d = b / n;
+    const e = 1 + d;
+    const c = e ** a;
+    const s = p * c;
+    const ans = s.toFixed(2);
+    setTime(t);
+    setInterest(r);
+    setNumber(n);
+    setPrinciple(p);
+    setResult(ans);
+    console.log("+====>", a, b, d, c, e, s);
   };
   return (
-    <Box>
+    <Box
+      style={{
+        padding: "50px",
+        borderRadius: 5,
+        border: "1px solid blue",
+        boxShadow: "0px 4px 10px rgba(2, 2, 2, 2)",
+      }}
+    >
       <Box
         style={{
           display: "flex",
           flexDirection: "row",
-          backgroundColor: "yellow",
         }}
       >
         <Box>
@@ -65,37 +72,36 @@ const CompoundInterest = () => {
           style={{
             display: "flex",
             flexDirection: "column",
-            backgroundColor: "pink",
           }}
         >
-            <TextField
+          <TextField
             style={{ margin: 5 }}
-            type="Numer"
+            type="Number"
             size="small"
             onChange={handlePrinciple}
           />
           <TextField
             style={{ margin: 5 }}
-            type="Numer"
+            type="Number"
             size="small"
             onChange={handleInterest}
           />
           <TextField
             style={{ margin: 5 }}
-            type="Numer"
+            type="Number"
             size="small"
             onChange={handleNumber}
           />
           <TextField
             style={{ margin: 5 }}
-            type="Numer"
+            type="Number"
             size="small"
             onChange={handleTime}
           />
         </Box>
       </Box>
       <Button onClick={handleSubmit}>Submit</Button>
-    {result}
+      {result}
     </Box>
   );
 };
