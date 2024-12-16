@@ -86,7 +86,11 @@ const NumberToWords = () => {
   return (
     <Container
       maxWidth="sm"
-      style={{ marginTop: "50px", boxShadow: "0px 4px 10px rgba(2, 2, 2, 2)" }}
+      style={{
+        marginTop: "50px",
+        boxShadow: "0px 4px 10px rgba(2, 2, 2, 2)",
+        borderRadius: "10px",
+      }}
     >
       <Box textAlign="center">
         <Typography variant="h4" gutterBottom>
