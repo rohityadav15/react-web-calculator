@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { TextField, Button, Typography, Container, Box } from '@mui/material';
 
 const NumberToWords = () => {
   const [number, setNumber] = useState('');
@@ -40,25 +41,34 @@ const NumberToWords = () => {
   };
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Number to Words Converter</h1>
-      <input
-        type="text"
-        placeholder="Enter a number"
-        value={number}
-        onChange={(e) => setNumber(e.target.value)}
-        style={{ padding: '10px', fontSize: '16px', width: '300px' }}
-      />
-      <button
-        onClick={handleConvert}
-        style={{ marginLeft: '10px', padding: '10px 20px', fontSize: '16px', cursor: 'pointer' }}
-      >
-        Convert
-      </button>
-      <div style={{ marginTop: '20px', fontSize: '18px', fontWeight: 'bold' }}>
-        {words}
-      </div>
-    </div>
+    <Container maxWidth="sm" style={{ marginTop: '50px' }}>
+      <Box textAlign="center">
+        <Typography variant="h4" gutterBottom>
+          Number to Words Converter
+        </Typography>
+        <TextField
+          label="Enter a number"
+          variant="outlined"
+          fullWidth
+          value={number}
+          onChange={(e) => setNumber(e.target.value)}
+          style={{ marginBottom: '20px' }}
+        />
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={handleConvert}
+          style={{ marginBottom: '20px' }}
+        >
+          Convert
+        </Button>
+        {words && (
+          <Typography variant="h6" color="textSecondary">
+            {words}
+          </Typography>
+        )}
+      </Box>
+    </Container>
   );
 };
 
