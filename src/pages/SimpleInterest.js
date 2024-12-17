@@ -58,11 +58,7 @@ const SimpleInterest = () => {
             justifyContent: "center",
             alignItems: "center",
             padding: "20px",
-            // borderRadius: "10px",
-            // height: "70%",
-            // width: "70%",
             flexDirection: "column",
-            // boxShadow: "0px 4px 10px rgba(2, 2, 2, 2)",
           }}
         >
           <Box
