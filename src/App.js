@@ -84,7 +84,6 @@ const WebCalculator = () => {
             height:"90vh",
             margin:"1%",
             borderRadius:"1%",
-            // position:"fixed",
             boxShadow: "0px 4px 10px rgba(2, 2, 2, 2)",
           }}
         >
